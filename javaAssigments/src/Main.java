@@ -1,9 +1,26 @@
 import collections.LetterRepeatCounterTask;
-import collections.WordRepeatCounterTask;
+import collections.MyArrayList;
 import string.StringTask;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("=======Своя коллекция ArrayList===================================================");
+        MyArrayList<String> myList = new MyArrayList<>();
+        myList.add("1");
+        myList.add("2");
+        myList.add("3");
+        myList.add("4");
+        myList.add("5");
+        System.out.println(myList);
+        myList.remove(myList.size() - 1);
+        System.out.println(myList);
+        myList.remove(0);
+        System.out.println(myList);
+        for(String str: myList) {
+            System.out.println(str);
+        }
+        System.out.println("===================================================================================");
+
         String str = "Новый год по-немецки\n" +
                 "Наступил Новый год.\n" +
                 "И как всегда, мы с нетерпением ждем его наступления, загадываем желания и верим, что они обязательно сбудутся.\n" +
@@ -14,7 +31,7 @@ public class Main {
         System.out.println("=======Строка наоборот===================================================");
         System.out.println(StringTask.getReverseString(str));
         System.out.println("=======Количество повторяющих слов===================================================");
-        System.out.println(WordRepeatCounterTask.getWordRepeatCount(str));
+//        System.out.println(WordRepeatCounterTask.getWordRepeatCount(str));
         System.out.println("=======Количество повторяющих буквв===================================================");
         System.out.println(LetterRepeatCounterTask.getLetterRepeatCount(str));
     }
